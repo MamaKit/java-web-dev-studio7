@@ -1,6 +1,38 @@
 package org.launchcode.studio7;
 
-public class DVD {
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class DVD extends BaseDisc implements OpticalDisc, Writable {
+    public DVD(String name, float capacity, String type, boolean reWritable) {
+        super(name, capacity, type, reWritable);
+    }
+
+    @Override
+    public void spinDisc() {
+
+    }
+
+    @Override
+    public void writeToDisc() {
+
+    }
+
+    @Override
+    public void readFromDisc() {
+
+    }
+
+    @Override
+    public void storeData() {
+        if (this.isReWritable()) {
+            ArrayList content;
+            System.out.println("ArrayList");
+        } else {
+            HashMap<Integer, String> content;
+            System.out.println("HashMap");
+        }
+    }
 
     // TODO: Implement your custom interface.
 
